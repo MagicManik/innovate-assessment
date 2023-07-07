@@ -1,8 +1,8 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -80,7 +80,7 @@ const Login = () => {
                         </div>
                         <input className='btn btn-primary text-secondary w-full max-w-xs' type="submit" value='Login' />
                     </form>
-                    <p><small>New to Tools Hunter? <Link className='text-primary' to='/signup'>Create new account</Link></small></p>
+                    <p><small>New to My Voiaj? <Link className='text-primary' to='/signup'>Create new account</Link></small></p>
                     <div className="divider">OR</div>
                     <button className="btn btn-outline">Continue With Google</button>
                 </div>

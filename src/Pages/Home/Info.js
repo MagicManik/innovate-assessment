@@ -1,6 +1,9 @@
 import React from 'react';
 import { infoData } from './InfoData';
 import { CiSearch } from "react-icons/ci";
+import DatePick from './DatePick';
+import CalenderBtn from './CalenderBtn';
+import SearchIndex from './SearchIndex';
 
 const Info = () => {
     return (
@@ -15,6 +18,8 @@ const Info = () => {
                             </div>
                         ))
                     }
+                    <CalenderBtn />
+                    <SearchIndex />
                 </div>
                 <div className='ml-3'>
                     <button className="btn bg-[#0010B5] outline-none border-none hover:bg-[#F8AF41] hover:text-black normal-case font-normal text-white h-[80px] w-[80px]"><CiSearch className='text-4xl' /></button>

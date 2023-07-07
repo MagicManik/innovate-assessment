@@ -1,6 +1,6 @@
 import React from 'react';
-import { MdOutlineLocalPhone } from "react-icons/md";
 import { HiOutlineEnvelope } from "react-icons/hi2";
+import { MdOutlineLocalPhone } from "react-icons/md";
 
 const TopMenu = () => {
     return (
@@ -13,7 +13,7 @@ const TopMenu = () => {
                     </div>
                     <div className='flex items-end text-white ml-10'>
                         <HiOutlineEnvelope />
-                        <small className='pl-1'>+971585075089</small>
+                        <small className='pl-1'>info@myvoiaj.com</small>
                     </div>
                 </div>
                 <div className='flex text-white'>

@@ -1,38 +1,37 @@
 import React from 'react';
-import image from '../../assets/carousell/image.png';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const Carousell = () => {
+const Carousell = ({img1, img2, img3}) => {
     return (
+    <div className='lg:w-[330px] w-full'>
         <div className="carousel w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src={image} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img src={image} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img src={image} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-                <img src={image} className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-            </div>
+            <Swiper
+            spaceBetween={30}
+            effect={'fade'}
+            loop={true}
+            navigation={true}
+            pagination={{
+             clickable: true,
+            }}
+            modules={[EffectFade, Navigation, Pagination]}
+            className="mySwiper">
+            <SwiperSlide>
+                <img src={img1} alt='' />
+            </SwiperSlide>
+            <SwiperSlide>
+                <img src={img2} alt='' />
+            </SwiperSlide>
+            <SwiperSlide>
+                <img src={img3} alt='' />
+            </SwiperSlide>
+        </Swiper>
         </div>
+    </div>
     )
 }
 

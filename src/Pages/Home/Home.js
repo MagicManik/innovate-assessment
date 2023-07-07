@@ -1,6 +1,6 @@
-import React from 'react'
-import Info from './Info';
+import React from 'react';
 import HotelList from './HotelList';
+import Info from './Info';
 
 const Home = () => {
     return (
