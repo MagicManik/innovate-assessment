@@ -78,7 +78,7 @@ const Login = () => {
                                 {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                             </label>
                         </div>
-                        <input className='btn btn-primary text-secondary w-full max-w-xs' type="submit" value='Login' />
+                        <input className='btn btn-primary text-secondary w-full max-w-xs' type="submit" defaultValue='Login' />
                     </form>
                     <p><small>New to My Voiaj? <Link className='text-primary' to='/signup'>Create new account</Link></small></p>
                     <div className="divider">OR</div>

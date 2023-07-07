@@ -23,8 +23,9 @@ main {
 
 .info-container {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1fr .3fr;
 }
+
 /* swiper css */
 .swiper {
   width: 100%;
@@ -72,5 +73,9 @@ main {
   .info-container {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .search-btn {
+    height: 85px;
   }
 }

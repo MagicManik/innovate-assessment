@@ -6,10 +6,12 @@ import SearchFrom from '../../components/SearchFrom';
 
 const FilterOptions = () => {
     return (
-        <div>
+        <div className='lg:block hidden'>
             <div className='my-8 border-b-2 border-t-2 border-[#F8F8F8]'>
                 <p className='pt-[22px] text-[14px] text-[#2C2827]'>Search by property name</p>
-                <SearchFrom />
+                <div className='pt-[14px] pb-[30px]'>
+                    <SearchFrom name={'Property Name'} />
+                </div>
             </div>
             <div className='flex justify-between'>
                 <p className='text-xl font-medium text-[#191C19]'>Filters</p>
@@ -20,7 +22,7 @@ const FilterOptions = () => {
             <div className=' my-[30px]'>
                 <h5 className='text-[15px] font-medium text-[#2C2827] pb-[12px]'>Popular filters</h5>
                 <div className='mb-[7px]'>
-                    <CheckInput id='fullyrefundable'/>
+                    <CheckInput id='fullyrefundable' />
                     <Level level='Fully refundable' htmlfor='fullyrefundable' />
                 </div>
                 <div className='mb-[7px]'>
@@ -141,7 +143,7 @@ const FilterOptions = () => {
                     <Level level='Breakfast included' htmlfor='breakfast' />
                 </div>
                 <div className='mb-[7px]'>
-                    <CheckInput id='lunch'/>
+                    <CheckInput id='lunch' />
                     <Level level='Lunch included' htmlfor='lunch' />
                 </div>
                 <div className='mb-[7px]'>
